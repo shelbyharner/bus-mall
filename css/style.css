@@ -1,0 +1,33 @@
+header {
+  background-color: #4D3166;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+  font-size: 30px;
+  padding: 30px;
+}
+
+body {
+  background-color: #D2B6EA;
+  font-family: 'Englebert', sans-serif;
+}
+
+h3 {
+  margin: 30px;
+  text-align: center;
+}
+
+section {
+  border: 3px solid black;
+  margin: 20px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #4D3166;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  height: 50px;
+  padding: 25px;
+}
