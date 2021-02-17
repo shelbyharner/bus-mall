@@ -103,38 +103,38 @@ function renderChart() {
     productClicks.push(allProducts[i].clicks);
   }
   var chartObject = {
-  type: 'bar',
+    type: 'bar',
     data: {
-    labels: productNames,
-    datasets: [{
-      label: 'Views',
-      data: productViews,
-      backgroundColor: 'rgba(153, 102, 255, 0.2)',
-      borderColor: 'rgba(153, 102, 255, 1)',
-      borderWidth: 3
-  },
-  {
-      label: 'Clicks',
-      data: productViews,
-      backgroundColor: 'rgba(0, 255, 229, 1)',
-      borderColor: 'rgba(0, 255, 229, 1)',
-      borderWidth: 3
-    }]
-  },
-  responsive: false;
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
+      labels: productNames,
+      datasets: [{
+        label: 'Views',
+        data: productViews,
+        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 3
+      },
+      {
+        label: 'Clicks',
+        data: productClicks,
+        backgroundColor: 'rgba(0, 255, 229, 1)',
+        borderColor: 'rgba(0, 255, 229, 1)',
+        borderWidth: 3
       }]
+    },
+    responsive: false,
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
     }
-  }
-};
+  };
 
-let ctx = document.getElementById('myChart').getContext('2d');
-let myChart = new Chart(ctx, chartObject);
+  let ctx = document.getElementById('myChart').getContext('2d');
+  let myChart = new Chart(ctx, chartObject);
 }
 
 imageContainer.addEventListener('click', handleClick);
