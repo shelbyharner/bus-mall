@@ -3,6 +3,8 @@
 let totalClicks = 0;
 let totalAllowed = 25;
 let allProducts = [];
+let catalogueArray = [];
+let uniqueImageCount = 6;
 let firstImage = document.querySelector('section img:first-child');
 let secondImage = document.querySelector('section img:nth-child(2)');
 let thirdImage = document.querySelector('section img:nth-child(3)');
@@ -43,11 +45,10 @@ function getRandomPic() {
 }
 
 function renderProduct() {
-  let catalogueArray = [];
-  while (catalogueArray.length < 3) {
+  while (catalogueArray.length < uniqueImageCount) {
     let randomNumber = getRandomPic();
     while (!catalogueArray.includes(randomNumber)){
-      catalogueArray.push(randomNumber);
+      catalogueArray.unshift(randomNumber);
     }
     // console.log(catalogueArray);
     // console.log(!catalogueArray.includes(randomNumber));
