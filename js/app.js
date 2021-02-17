@@ -88,6 +88,7 @@ function handleClick(event) {
   renderProduct();
   if (totalClicks === totalAllowed) {
     imageContainer.removeEventListener('click', handleClick);
+    renderChart();
   }
 }
 
@@ -116,7 +117,7 @@ function renderChart() {
       {
         label: 'Clicks',
         data: productClicks,
-        backgroundColor: 'rgba(0, 255, 229, 1)',
+        backgroundColor: 'rgba(0, 255, 229, 0.2)',
         borderColor: 'rgba(0, 255, 229, 1)',
         borderWidth: 3
       }]
